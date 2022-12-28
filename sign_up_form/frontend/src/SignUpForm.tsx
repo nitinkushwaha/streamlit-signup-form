@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import Box from '@mui/material/Box';
 import { TextField, Container, Typography, FormControl, InputLabel, InputAdornment, FilledInput, IconButton } from '@mui/material';
 import Button from '@mui/material/Button';
 
@@ -40,7 +39,7 @@ export default function SignUpForm(props: props) {
     return (
         <Container maxWidth="sm">
             <div className="form-container">
-                <img src="samooha_Logo.png" style={{ width: "204px" }} />
+                <img src="samooha_Logo.png" className="logo" />
                 <Typography variant="h5" gutterBottom className="form-title">
                     Sign up using your snowflake account
                 </Typography>
