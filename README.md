@@ -37,4 +37,4 @@ streamlit run sign_up_form/__init__.py
 
 ## To do
 - [ ] On form submit execute a callback instead of returning variable
-- [ ] Add instructions to easily verify the functionality of the component
+- [x] Add instructions to easily verify the functionality of the component
