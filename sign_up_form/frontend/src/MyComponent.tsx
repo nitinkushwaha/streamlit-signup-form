@@ -21,6 +21,8 @@ class MyComponent extends StreamlitComponentBase<State> {
 
   /** Click handler for our "Click Me!" button. */
   private onClicked = (): void => {
+    //Submit the form
+    //or call the API, On based on response, set the component value to true.
     Streamlit.setComponentValue(true);
   }
 

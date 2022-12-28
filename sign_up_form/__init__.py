@@ -1,19 +1,19 @@
 import os
 import streamlit.components.v1 as components
 
-_RELEASE = False
+_RELEASE = True
 if not _RELEASE:
     _component_func = components.declare_component(
-        "my_component",
+        "sign_up_form_component",
         url="http://localhost:3001",
     )
 else:
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     build_dir = os.path.join(parent_dir, "frontend/build")
-    _component_func = components.declare_component("my_component", path=build_dir)
+    _component_func = components.declare_component("sign_up_form_component", path=build_dir)
 
 
-def my_component(account=None, key=None):
+def sign_up_form_component(account=None, key=None):
     """Create a new instance of "SignUpForm".
 
     Parameters
@@ -38,7 +38,7 @@ if not _RELEASE:
     import streamlit as st
 
     st.subheader("Component view without account number")
-    signup_clicked_1 = my_component()
+    signup_clicked_1 = sign_up_form_component()
     if signup_clicked_1:
         st.markdown("You've clicked on signup")
 
@@ -46,6 +46,6 @@ if not _RELEASE:
     st.subheader("Component with variable account args")
 
     name_input = st.text_input("Enter a account number", value="12345678")
-    signup_clicked_2 = my_component(name_input, key="foo")
+    signup_clicked_2 = sign_up_form_component(name_input, key="foo")
     if signup_clicked_2:
         st.markdown("You've clicked on signup")
