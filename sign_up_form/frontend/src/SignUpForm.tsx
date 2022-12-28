@@ -40,7 +40,7 @@ export default function SignUpForm(props: props) {
     return (
         <Container maxWidth="sm">
             <div className="form-container">
-                <img src="/samooha_Logo.png" style={{ width: "204px" }} />
+                <img src="samooha_Logo.png" style={{ width: "204px" }} />
                 <Typography variant="h5" gutterBottom className="form-title">
                     Sign up using your snowflake account
                 </Typography>
